@@ -56,7 +56,7 @@ def main():
         st.write(f"### {key}")
         st.write(value["question"])
         answers = st.multiselect("選択肢を選んでください:", value["options"])
-        if set(answers) == set(value["answers"]):
+        if answers == value["answers"]:
             score += 1
             st.write("正解です！")
         #else:
